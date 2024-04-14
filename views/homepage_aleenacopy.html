@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostalgia Homepage</title>
   <link rel="stylesheet" href="/public/css/homepage_aleenacopy.css">
+  <link rel="stylesheet" href="/public/css/uploadbutton.css">
   <style>
     /* Style for the pop-up modal */
     .modal {
@@ -88,8 +89,10 @@
 
   <!-- Header Section -->
   <header>
-    <h1 id="header-text" class="fade-in">Memory Lane</h1>
-    <a href="">Login</a>
+    <h1 id="header-text" class="fade-in">Nostalgiapedia</h1>
+    <a href="About.html">About</a>
+    <a href="Login.html">Login</a>
+    
   </header>
   
 
@@ -108,25 +111,35 @@
       </div>
     </section>
 
-    <!-- Nostalgia Gallery Section -->
-    <section class="gallery">
-      <h1>Nostalgia Gallery</h1>
-      <div class="remember-when">
-        <p>Remember When?</p>
-      </div>
-      <p class="share-text">Share your memories with us and relive the past.</p>
-      <button type="button" class="upload-btn" onclick="openModal()">Upload Photos</button>
-      
-      <div class="image-grid" id="image-grid">
-        <!-- Uploaded images will be displayed here -->
-        <img src="/public/images/imgGroup.jpg" alt="Image 1">
-        <img src="/public/images/img2.jpg" alt="Image 2">
-        <img src="/public/images/img3.jpg" alt="Image 3">
-        <img src="/public/images/img4.jpg" alt="Image 4">
-        <img src="/public/images/img5.jpg" alt="Image 5">
-        <img src="/public/images/img1.jpg" alt="Image Team">
-      </div>
-    </section>
+<!-- Nostalgia Gallery Section -->
+<section class="gallery">
+    <h1>Nostalgia Gallery</h1>
+    <div class="remember-when">
+      <p>Remember When?</p>
+    </div>
+    <p class="share-text">Share your memories with us and relive the past.</p>
+    
+    <!-- Place the form for image upload here -->
+    <form id="image-upload-form" style="display: none;">
+      <input type="file" id="image-input" accept="image/*" multiple>
+      <button type="button" class="upload-btn" onclick="uploadImages()">Upload</button>
+    </form>
+    
+    <button type="button" class="upload-btn" onclick="openModal()">Upload Photos</button>
+    
+    <div class="image-grid" id="image-grid">
+      <!-- Uploaded images will be displayed here -->
+      <img src="/public/images/imgGroup.jpg" alt="Image 1">
+      <img src="/public/images/img2.jpg" alt="Image 2">
+      <img src="/public/images/img3.jpg" alt="Image 3">
+      <img src="/public/images/img4.jpg" alt="Image 4">
+      <img src="/public/images/img5.jpg" alt="Image 5">
+      <img src="/public/images/img1.jpg" alt="Image Team">
+    </div>
+  </section>
+  
+
+   
 
     <!-- Pop-up modal for login -->
     <div id="myModal" class="modal">
@@ -138,7 +151,7 @@
 
 
   </main>
-
+  <script src="/views/uploadbutton.js"></script>
   <script>
     function openModal() {
       var modal = document.getElementById("myModal");

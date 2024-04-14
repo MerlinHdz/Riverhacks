@@ -10,8 +10,12 @@ body {
     color: #fff;
     padding: 20px;
     text-align: left;
+    
   }
 
+  header a{
+    padding: 10px;
+  }
   /* Define the animation */
 @keyframes fadeIn {
     from {
