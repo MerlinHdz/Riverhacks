@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90s Nostalgia</title>
+    <link rel="stylesheet" href="/public/css/90scopy.css">
+</head>
+
+<body>
+    <header style="background-color: #83A2FF; padding: 10px;">
+        <h1>Welcome to the 90s!</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('movies')">Movies</a></li>
+                <li><a href="#" onclick="showSection('tv-shows')">TV Shows</a></li>
+                <li><a href="#" onclick="showSection('major-events')">Major Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="movies" class="content-section">
+            <div class="section-title">
+                <h2>Movies</h2>
+            </div>
+            <div class="movies">
+                <!-- Placeholder content for movies -->
+                <div class="movie">
+                    <img src="/public/images/titanic.jpg" alt="Movie 1">
+                    <h3>Titanic</h3>
+                    <p>One of the most romantic movies of all time!</p>
+                </div>
+
+                <!-- Add more movie entries as needed -->
+                <div class="movie">
+                    <img src="/public/images/matilda.jpg" alt="Movie 1">
+                    <h3>Matilda</h3>
+                    <p>Cute childhood Movie</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tv-shows" class="content-section" style="display: none;">
+            <div class="section-title">
+                <h2>TV Shows</h2>
+            </div>
+            <div class="tv-shows">
+                <!-- Placeholder content for TV shows -->
+                <div class="tv-show">
+                    <img src="/public/images/friends.jpg" alt="TV Show 1">
+                    <h3>Friends</h3>
+                    <p>Do you need me to describe it!</p>
+                </div>
+                <!-- Add more TV show entries as needed -->
+                <div class="tv-show">
+                    <img src="/public/images/mtv.png" alt="TV Show 2">
+                    <h3>MTV</h3>
+                    <p>Music and Reality Show!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="major-events" class="content-section" style="display: none;">
+            <div class="section-title">
+                
+                <h2>Major Events</h2>
+            </div>
+            <div class="events">
+                <!-- Placeholder content for major events -->
+                <div class="event">
+                    <img src="/public/images/soviet.jpg" alt="Major Event 1">
+                    <h3>Fall of the Soviet Union</h3>
+                    <p>On December 26, 1991 because of political instability, Soviet Union collapsed.</p>
+                </div>
+                <!-- Add more event entries as needed -->
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
