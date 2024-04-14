@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
 
-    registerForm.addEventListener('submit', async (e) => {
+    loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('/register', {
+            const response = await fetch('/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ username, email, password })
+                body: JSON.stringify({ email, password })
             });
 
             const data = await response.json();
 
             if (response.ok) {
-                // Registration successful
-                alert(data.message);  // Show alert with success message
-
-                window.location.href = '/login';  // Redirect to login page
+                // Login successful
+                alert(data.message);
+            
+                // Redirect to dashboard or homepage
+                window.location.href = '/'; // or wherever you want to redirect
             } else {
-                // Registration failed
+                // Login failed
                 alert(data.message);
             }
         } catch (error) {
