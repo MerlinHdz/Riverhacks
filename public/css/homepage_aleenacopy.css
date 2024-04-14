@@ -1,0 +1,102 @@
+body {
+    font-family: "Pacifico", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #F1EEDC; /* Set background color to light pink */
+  }
+  
+  header {
+    background-color: #83A2FF;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+  }
+
+  /* Define the animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the header text */
+  .fade-in {
+    animation: fadeIn 2s ease-out;
+  }
+  
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .timeline {
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    
+    
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #B4BDFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  .gallery {
+    border-top: 2px solid #333;
+    padding-top: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 0px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .image-grid img:hover {
+    transform: translateY(-5px);
+  }
+  .share-text {
+    margin-top: 10px;
+    margin-right: 40px; /* Add margin to separate the button */
+    display: inline-block; /* Ensure the button and text are on the same line */
+    vertical-align: middle; /* Align the button vertically */
+    color: #555;
+}
+
+.upload-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle; /* Align the button vertically */
+}
